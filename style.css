@@ -1,0 +1,387 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 150px;
+    z-index: 99;
+}
+nav .logoAndLinks{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    animation-duration: 3s;
+    animation-name: leftNav;
+}
+
+@keyframes leftNav {
+    0%{
+        transform: translateY(-50px);
+    }
+}
+nav .logoAndLinks img{
+    width: 120px;
+    cursor: pointer;
+}
+nav .logoAndLinks .designLinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav .logoAndLinks .designLinks a{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    padding: 0 20px;
+    color: black;
+    text-decoration: none;
+}
+nav .logoAndLinks .designLinks hr{
+    border-radius: 20px;
+    border: 2px solid #a168c0;
+    width: 50%;
+    visibility: hidden;
+    transition: 0.2s;
+}
+nav .logoAndLinks .designLinks a:hover + hr{
+    visibility: visible;
+}
+
+nav button{
+    background-color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 25px;
+    color: black;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    animation-duration: 3s;
+    animation-name: leftNav ;
+}
+nav button:hover{
+    background-color: rgba(255, 255, 255, 0.051);
+}
+nav i{
+    font-size: 20px;
+    color:#a168c0;
+    visibility: hidden;
+    cursor: pointer;
+    animation-duration: 3s;
+    animation-name: leftNav ;
+}
+nav i:hover{
+    color:#a168c0a5;
+}
+
+
+/* section one */
+.secOne{
+    transform: translateY(-100px);
+    background-image: url('blue_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding:0 150px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.secOne  .leftDivSecOne{
+    width: 40%;
+    animation-duration: 3s;
+    animation-name: left;
+}
+@keyframes left {
+    0%{
+        transform: translateY(-300px); 
+        opacity: 0;
+    }
+}
+
+
+.secOne  .leftDivSecOne h1{
+    font-size: 45px;
+    color: black;
+}
+.secOne .leftDivSecOne h1 span{
+    color: #a377ba;
+}
+.secOne  .leftDivSecOne p{
+    color:gray;
+    font-size: 22px;
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+.secOne .rightDivSecOne{
+    width: 40%;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50px);
+}
+.secOne .rightDivSecOne .mask{
+    position: absolute;
+    width: 280px;
+    bottom: 30px;
+    left: 25%;
+    z-index: 2;
+    animation-duration: 3s;
+    animation-name: mask;
+}
+@keyframes mask {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+.secOne .rightDivSecOne .landing{
+    position: absolute;
+    width: 580px;
+    height: 680px;
+    bottom: -150px;
+    left: 0;
+    z-index: 1;
+    animation-duration: 3s;
+    animation-name: mask;
+}
+
+.secOne .rightDivSecOne .clouds{
+    position: absolute;
+    bottom: -110px;
+    left: 10%;
+    width: 400px;
+    z-index: 3;
+    animation-duration: 3s;
+    animation-name: mask;
+}
+.waves{
+    width: 90%;
+    transform: translate(-350px , -220px);
+    z-index: 2;
+}
+
+/* section two */
+.secTwo{
+    position: relative;
+    margin: 0 20px;
+    /* padding: 0 120px; */
+    height: 600px;
+    transform: translateY(-250px);
+}
+.secTwo .bgSecTwo{
+    position: absolute;
+    top: 0;
+    left: 220px;
+    right: 80px;
+    bottom: 0;
+    width: 75%;
+    height: 100%;
+    z-index: -1;
+}
+.secTwo .topDiv{
+    position: absolute;
+    left: 80px;
+    top: 90px;
+}
+.secTwo .flexDivs{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.secTwo .flexDivs img{
+    width: 200px;
+    margin-bottom: 10px;
+}
+.secTwo .flexDivs h1{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.secTwo .flexDivs p{
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+
+
+.secTwo .midDiv{
+    width: 290px;
+    position: absolute;
+    left: 41%;
+    top: 38%;
+}
+.secTwo .bottomRightDiv{
+    width: 320px;
+    position: absolute;
+    right:8%;
+    top: 570px;
+}
+
+.secTwo .bottomLeftDiv{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 80px;
+    top: 530px;
+    background-image: url('why_kudzoka_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.secTwo .bottomLeftDiv h5{
+    color: white;
+    font-size: 14px;
+    margin-left: 20%;
+    font-weight: 400;
+}
+.secTwo .bottomLeftDiv h1{
+    color: white;
+    font-size: 26px;
+    margin-left: 20%;
+}
+
+/* section three */
+
+.secThree{
+    position: relative;
+    /* margin-bottom: 100px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.secThree .arrwo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 360px;
+    transform: translateY(-200px);
+    /* position: absolute;
+    top: 60%;
+    left: 38%; */
+}
+.secThree .arrwo i{
+    color: gray;
+    font-size: 20px;
+    cursor: pointer;
+}
+.secThree .flexSecThree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.secThree .flexSecThree .oneSecthree{
+    width: 150px;
+    height: 150px;
+}
+.secThree .flexSecThree .midSEcThree{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+}
+.secThree .flexSecThree .midSEcThree img{
+    width: 350px;
+}
+.secThree .flexSecThree .midSEcThree h1{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.secThree .flexSecThree .midSEcThree p{
+    text-align: center;
+    width: 60%;
+    color: gray;
+}
+
+
+/* section four */
+.secFour{
+    height: 550px;
+    background-image: url('Group\ 1131.png');
+    background-size:120%;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    /* margin-bottom: 100px; */
+}
+.rightecFour{
+    width: 600px;
+}
+.leftSecFour{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+.leftSecFour .storeDivs{
+    display: flex;
+    gap: 15px;
+}
+.leftSecFour .storeDivs .storImgs{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+.leftSecFour .storeDivs .storImgs img{
+    width: 20px;
+}
+.leftSecFour .storeDivs .storImgs .apple{
+    display: flex;
+    flex-direction: column;
+
+}
+.leftSecFour .storeDivs .storImgs h1{
+    font-size: 12px;
+}
+.leftSecFour .storeDivs .storImgs p{
+    font-size: 8px;
+}
+
+.leftSecFour .socialSecFour{
+    display: flex;
+    gap: 15px;
+}
+.leftSecFour .socialSecFour img{
+    width: 15px;
+}
+
+.leftSecFour .linksSecfour{
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+.leftSecFour .linksSecfour a{
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
+
